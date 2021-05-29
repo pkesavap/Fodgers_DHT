@@ -15,7 +15,7 @@ def encryption(file, decryption = False):
     encryptor = AES.new(key, AES.MODE_CBC, IV)
     chunksize = 64 * 1024
 
-    if decryption == False:
+    if decryption is False:
         
         name = SHA256.new(file.encode('utf-8'))
         name = str(name.digest())
